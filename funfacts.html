@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-World Fun Facts</title>
+    <style>
+        body {
+            background-color: #E6A8D7; /* Light Orchid background */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 60px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #4B0082, #4B0082); /* Dark Purple color */
+            background-clip: text;
+            color: transparent;
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+
+        .square {
+            width: 80px;
+            height: 80px;
+            background-color: #4B0082; /* Dark Purple */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: #E6A8D7; /* Light Orchid color for symbols */
+            cursor: pointer;
+        }
+
+        .rectangle {
+            flex-grow: 1; /* Make the rectangle stretch to fill space between squares */
+            height: 80px;
+            background-color: #4B0082; /* Dark Purple */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: #E6A8D7; /* Light Orchid color for text */
+            font-weight: bold;
+            margin: 0 10px; /* Spacing between squares and rectangle */
+        }
+
+        .cloud {
+            background-color: #4B0082; /* Dark Purple color */
+            color: #E6A8D7; /* Light Orchid color for text */
+            padding: 20px;
+            border-radius: 50px;
+            width: 80%;
+            max-width: 800px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: left;
+            margin: 20px 0; /* Add vertical margin for spacing */
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+            line-height: 1.5;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0; /* Add spacing above and below the image */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Specific style for the fourth image */
+        #image4 img {
+            max-width: 70%; /* Make the fourth image smaller */
+        }
+    </style>
+</head>
+<body>
+    <h1>&#x1F380; K-World Fun Facts &#x1F380;</h1>
+
+    <div class="container">
+        <div class="square" onclick="previousFact()"><</div>
+        <div class="rectangle">FACTS</div>
+        <div class="square" onclick="nextFact()">></div>
+    </div>
+
+    <div id="fact1" class="cloud">
+        "The pair first captured hearts together in the 2018 film <i>The Negotiation</i>, but it was their on-screen romance in the hit drama <i>Crash Landing on You</i> (2019-2020) that turned them into a beloved couple both on and off the screen. Their chemistry in the drama led to real-life dating rumors, which they confirmed in 2021. In March 2022, they tied the knot in a beautiful ceremony, becoming one of the most iconic couples in the Korean entertainment industry."
+    </div>
+    <div class="image-container" id="image1">
+        <img src="https://i.pinimg.com/564x/8e/3b/0b/8e3b0ba50b65c89d67a30144052aa42e.jpg" alt="Crash Landing On You">
+    </div>
+
+    <div id="fact2" class="cloud" style="display:none;">
+        "Song Joong-ki starred in the hit K-drama <i>Descendants of the Sun (DOTS)</i>. This drama also led Joong-ki to meet his first wife, Song Hye Kyo. After much speculation by their fans, the two confirmed their relationship in July 2017; it was also revealed that they had been dating since mid-2015, around the time DOTS was being shot. Song Joong-ki and Song Hye Kyo finally got married on October 31, 2017. Unfortunately, their marital bliss didn’t last long. Just 20 months after the wedding, Song Joong-ki filed for divorce, a move that took everyone by surprise, including his then-wife, Song Hye Kyo, who found out about the divorce from the media."
+    </div>
+    <div class="image-container" id="image2" style="display:none;">
+        <img src="https://i.pinimg.com/736x/48/6f/7b/486f7b718ec3e285ef382da043d562c3.jpg" alt="Descendants of the Sun">
+    </div>
+
+    <div id="fact3" class="cloud" style="display:none;">
+        "South Korean sweethearts IU and Lee Jong-Suk, whose dating rumours stirred quite the tabloid frenzy, have made their romance public. And, it is a perfect time indeed to take a stroll down memory lane and track IU and Lee’s relationship history — from when they first met to their beautiful love declaration in 2022 and beyond. IU and Lee’s union is emblematic of a true fairytale romance. She is a K-pop sensation. He is a television heartthrob. And together they make for one of the most-loved celebrity couples in Korea."
+    </div>
+    <div class="image-container" id="image3" style="display:none;">
+        <img src="https://i.pinimg.com/564x/cd/3e/62/cd3e62fa7d0424ec19f25afb61af708f.jpg" alt="IU and Lee Jong-Suk">
+    </div>
+
+    <div id="fact4" class="cloud" style="display:none;">
+        "Actor Ryu Jun-yeol recently addressed the rumours surrounding his relationships with actresses Han So-hee and Hyeri. The actor, known for his roles in popular K-dramas such as 'Reply 1988' and 'Lucky Romance', found himself at the center of speculation regarding his personal life, prompting him to break his silence on the matter. During a press event for his upcoming series 'The 8 Show', he acknowledged the rumours but chose to refrain from divulging further details, stating that he believed it was best to maintain silence amidst the public scrutiny. 'I felt it was best to keep silent and put up with the criticism rather than trying to correct the misinformation about my personal life that was spread on social media. As it is about my personal life, I think I would like to give a separate interview at some other time', he said. Netizens scrutinised the actors' every move, particularly as Han So-hee and Hyeri's alleged social media feud added fuel to the fire. Despite public outcry and criticisms, Ryu Jun-yeol chose to maintain a stoic silence, refusing to engage with the ongoing controversy. While Han So-hee clarified the timeline of her relationship with Ryu Jun-yeol, their short-lived romance ultimately succumbed to external pressures and ended after a mere two weeks."
+    </div>
+    <div class="image-container" id="image4" style="display:none;">
+        <img src="https://www.allkpop.com/upload/2024/03/content/291128/1711726094-header-photo.jpg" alt="Ryu Jun-yeol">
+    </div>
+
+    <div id="fact5" class="cloud" style="display:none;">
+        "Park Bo Young and Park Hyung Sik worked on the romance comedy Strong Woman Bong Soon.During a recent interview Park Hyung Sik himself confessed that people on the sets of Strong Woman Bong Soon also felt that something romantic was going on between the two. He recalled an anecdote when the director asked them if something was really was going on between Park Hyung Sik and Park Bo Young. The actress laughed and replied, 'Director, I will film and will see how Park Hyung Sik looks at you. He looks at everyone the same way'. 
+        Park Hyung Sik has also confessed his feelings for Park Bo Young in the past. But despite fans shipping Park Hung Sik and Park Bo Young, they were never actually confirmed to be dating and their relationship were just rumors. "
+    </div>
+    <div class="image-container" id="image5" style="display:none;">
+        <img src="https://i.pinimg.com/564x/1a/1a/21/1a1a210da81dfa2c70bfea1843f86719.jpg" alt="park and park couple">
+    </div>
+
+    <div id="fact6" class="cloud" style="display:none;">
+        "It is based on a web novel titled Tomorrow's Best, which was also serialized as a webtoon by illustrator Doong Doong. It was previously titled Time Walking on Memory.During an interview producer of ‘The Lovely Runner’, Yoon Jongho mentioned that the series owes its existence to Kim Hye-Yoon, and the show's writer envisioned her playing Im Sol's character, and without her, the series might never have been made. It was also revealed that the series took a solid three years to produce and was offered to several other actors before the role ultimately went to Byeon Woo Seok."
+    </div>
+    <div class="image-container" id="image6" style="display:none;">
+        <img src="https://i.pinimg.com/736x/38/1b/9a/381b9ac68fa286a5e8c20af127a75914.jpg" alt="lovely runner">
+    </div>
+
+    <div id="fact7" class="cloud" style="display:none;">
+        "In the K-drama My Demon, which dropped on November 24, 2023, there’s an unforgettable moment in episode 8 where the iconic Hindi song 'Tum Hi Ho' plays at the 30:59 mark! This unexpected musical cameo sent waves of excitement through Indian K-drama fans, who couldn’t believe their ears! It was a proud and thrilling moment, sparking joy and surprise as fans never imagined hearing a beloved Bollywood tune in their favorite K-drama!"
+    </div>
+    <div class="image-container" id="image7" style="display:none;">
+        <iframe src="https://www.instagram.com/reel/C71ppuEP5Qv/embed" width="400" height="480" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+    </div>
+
+    <script>
+        let currentFact = 1;
+
+        function showFact(factNumber) {
+            // Hide all facts and images
+            for (let i = 1; i <= 7; i++) {
+                document.getElementById('fact' + i).style.display = 'none';
+                document.getElementById('image' + i).style.display = 'none';
+            }
+            // Show the selected fact and image
+            document.getElementById('fact' + factNumber).style.display = 'block';
+            document.getElementById('image' + factNumber).style.display = 'block';
+        }
+
+        function nextFact() {
+            currentFact = (currentFact % 7) + 1; // Cycle through facts 1 to 7
+            showFact(currentFact);
+        }
+
+        function previousFact() {
+            currentFact = (currentFact - 2 + 7) % 7 + 1; // Cycle back through facts 1 to 7
+            showFact(currentFact);
+        }
+    </script>
+</body>
+</html>
